@@ -10,7 +10,7 @@ installation:
   roleListGroups:
     - '*'
 
-featureGates: "ImagePullJobGate=true"
+featureGates: "KruiseDaemon=false"
 
 externalCerts:
   # annotations to patch for webhook configuration and crd
