@@ -6,8 +6,8 @@ metadata:
     control-plane: openkruise
   name: {{ .Values.installation.namespace }}
 {{- end }}
+{{- if not (contains "KruiseDaemon=true" .Values.featureGates) }}
 ---
-{{- if .Values.daemon.enabled }}
 apiVersion: v1
 kind: Namespace
 metadata:
