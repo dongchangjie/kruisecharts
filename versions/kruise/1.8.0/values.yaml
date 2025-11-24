@@ -64,6 +64,7 @@ webhookConfiguration:
   timeoutSeconds: 30
 
 daemon:
+  enabled: false
   log:
     # log level for kruise-daemon
     level: "4"
