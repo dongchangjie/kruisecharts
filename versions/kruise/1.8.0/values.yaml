@@ -6,7 +6,7 @@ crds:
 # values for kruise installation
 installation:
   namespace: kruise-system
-  createNamespace: true
+  createNamespace: false
   roleListGroups:
     - '*'
 
