@@ -921,6 +921,7 @@ subjects:
 - kind: ServiceAccount
   name: kruise-manager
   namespace: {{ .Values.installation.namespace }}
+{{- if not (contains "KruiseDaemon=true" .Values.featureGates) }}
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
@@ -951,6 +952,7 @@ subjects:
 - kind: ServiceAccount
   name: kruise-daemon
   namespace: {{ .Values.installation.namespace }}
+{{- end }}
 ---
 kind: ClusterRole
 apiVersion: rbac.authorization.k8s.io/v1
