@@ -7,10 +7,12 @@ metadata:
   name: {{ .Values.installation.namespace }}
 {{- end }}
 ---
+{{- if .Values.daemon.enabled }}
 apiVersion: v1
 kind: Namespace
 metadata:
   name: kruise-daemon-config
+{{- end }}
 ---
 apiVersion: v1
 kind: Service
